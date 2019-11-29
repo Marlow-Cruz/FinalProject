@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body onload="init()">
+    <header> 
+      <h1> Final Project </h1>
+    </header>
+    <!-- <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas> -->
+    <div class="main">
+        <div class="left">
+            <canvas id="can" width=1045 height=800></canvas>
+            <div class=toolbar>
+              <p>Thickness: <input id="thickness" type="number" name="thickness" min="1"></p>
+              <button class="clearButton">Clear</button>
+          </div>
+        </div>
+
+        <div class="right">
+            <ul id="messages"></ul>
+            <form action="">
+              <input id="m" autocomplete="off" /><button>Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
+  </body>
+</html>
